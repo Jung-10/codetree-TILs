@@ -1,5 +1,5 @@
 n = int(input())
-num_list = list(map(int, input().split(' ')))
+num_list = list(map(int, input().split()))
 
 result = [i * i for i in num_list]
 

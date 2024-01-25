@@ -3,13 +3,13 @@ n = int(input())
 arr = [n]
 
 # 재귀함수
-def factorial(n) :
-    if n != 1 :
+def factorial(n):
+    if n == 1:  
+        return arr
+    else:
         n = n // 3
         arr.append(n)
-        factorial(n)
-    else :
-        return arr
+        return factorial(n)
 
 result = factorial(n)
 

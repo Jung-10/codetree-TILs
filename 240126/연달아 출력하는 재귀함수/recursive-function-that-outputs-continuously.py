@@ -1,18 +1,16 @@
+def function(n):
+    if n < 3:
+        return [n]
+    
+    next_number = n // 3
+    result = function(next_number)
+    result.append(n)
+    
+    return result
+
+# 입력
 n = int(input())
 
-arr = [n, n // 3]
-
-# 재귀함수
-def factorial(n):
-    if n == 1:  
-        return arr
-    else:
-        n = n // 3
-        arr.append(n)
-        return factorial(n)
-
-result = factorial(n//3)
-
-# 정수 n에서 시작하여 수를 왼쪽으로 이동하며 수를 하나씩 적어야하는데 오른쪽으로 이동해서 출력했으므로 뒤집어주기
-reversed_list = list(reversed(arr)) 
-print(*reversed_list)
+# 결과 출력
+result = function(n)
+print(" ".join(map(str, result)))

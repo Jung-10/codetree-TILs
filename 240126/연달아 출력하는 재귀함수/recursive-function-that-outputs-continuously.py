@@ -8,6 +8,8 @@ def factorial(n) :
         n = n // 3
         arr.append(n)
         factorial(n)
+    else :
+        return arr
 
 result = factorial(n)
 

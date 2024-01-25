@@ -1,7 +1,7 @@
 n = int(input())
 num_list = list(map(int, input().split(' ')))
 
-result = [i ** 2 for i in num_list]
+result = [i * i for i in num_list]
 
 print(*result)
 

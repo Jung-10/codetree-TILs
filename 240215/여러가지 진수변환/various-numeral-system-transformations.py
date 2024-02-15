@@ -2,7 +2,7 @@ n, b = map(int, input().split())
 answer = []
 
 while True :
-    if n < 2 :
+    if n < 2 and n != 0:
         answer.append(n)
         break
 

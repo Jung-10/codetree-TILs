@@ -17,21 +17,23 @@ color_arr = [
 # 첫 번째 직사각형 색칠 
 for x in range(ax1, ax2) :
     for y in range(ay1, ay2) :
-        color_arr[x][y] = 1
+        color_arr[x][y] += 1
 
-# 두 번째 직사각형 색칠 (첫 번째 직사각형과 겹치는 부분이면 두고 아니면 0으로 바꿔줌)
+# 두 번째 직사각형 색칠
 for x in range(bx1, bx2) :
     for y in range(by1, by2) :
         if color_arr[x][y] == 1 :
-            color_arr[x][y] = 1
-        elif color_arr[x][y] != 1 :
-            color_arr[x][y] = 0
+            color_arr[x][y] -= 1
 
 # 남은 부분을 덮기 위한 사각형의 최소 넓이
-area = 0
+x_arr = []
+y_arr = []
 for x in range(2000 + 1) :
     for y in range(2000 + 1) :
         if color_arr[x][y] == 1 :
-            area += 1
+            x_arr.append(x)
+            y_arr.append(y)
+
+area = (max(x_arr) - min(x_arr) + 1) * (max(y_arr) - min(y_arr) + 1)
 
 print(area)

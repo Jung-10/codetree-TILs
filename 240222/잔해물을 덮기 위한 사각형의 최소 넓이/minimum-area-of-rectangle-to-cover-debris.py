@@ -34,6 +34,8 @@ for x in range(2000 + 1) :
             x_arr.append(x)
             y_arr.append(y)
 
-area = (max(x_arr) - min(x_arr) + 1) * (max(y_arr) - min(y_arr) + 1)
-
-print(area)
+if len(x_arr) == 0 or len(y_arr) == 0 :
+    print(0)
+else :
+    area = (max(x_arr) - min(x_arr) + 1) * (max(y_arr) - min(y_arr) + 1)
+    print(area)

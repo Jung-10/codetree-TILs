@@ -5,7 +5,7 @@ arr = [
     for _ in range(n)
 ]
 
-cnt = 1
+cnt = 0
 cnt_max = 0
 for i in range(0, n - 1) :
     if arr[i] < arr[i+1] :

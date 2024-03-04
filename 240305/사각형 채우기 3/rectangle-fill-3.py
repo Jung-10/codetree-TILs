@@ -7,6 +7,6 @@ dp[2] = 7
 dp[3] = 22
 
 for i in range(4, n + 1) :
-    dp[i] = (dp[i - 2] * (i - 1)) + (dp[i - 1] * i) - i
+    dp[i] = (dp[i - 2] * 2) + (dp[i - 1] * 3) - i
 
 print(dp[n] % mod)

@@ -7,18 +7,19 @@ arr = [
 arr = sorted(arr)
 
 cur_cnt = 1
-max_cnt = 0
+max_cnt = 1
 
-cur_sum = 0
-max_sum = 0
+cur_sum = arr[0]
+max_sum = arr[0]
 
-for i in range(n - 1) :
-    if arr[i] + 1 == arr[i + 1] :
+for i in range(1, n) :
+    if arr[i] == arr[i - 1] + 1:
         cur_cnt += 1
         cur_sum += arr[i]
     else : 
-        cur_sum += arr[i]
         max_cnt = max(cur_cnt, max_cnt)
-        max_sum = cur_sum
-        
+        max_sum = max(cur_sum, max_sum)
+        cur_cnt = 1
+        cur_sum = arr[i]
+    
 print(max_sum)

@@ -18,7 +18,7 @@ for i in range(1, n) :
         cur_sum += arr[i]
     else : 
         max_cnt = max(cur_cnt, max_cnt)
-        max_sum = max(cur_sum, max_sum)
+        max_sum = cur_sum
         cur_cnt = 1
         cur_sum = arr[i]
     
